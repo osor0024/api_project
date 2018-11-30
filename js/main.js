@@ -142,7 +142,11 @@ let nataliasCode = (function () {
 
                 return;
 
-            } 
+            } else {
+
+                currentPage(1);
+
+            }
             startSearch();
 
         });
@@ -281,8 +285,9 @@ let nataliasCode = (function () {
             return;
         }
 
-        runSearch(searchString);
         document.getElementById("search-input").innerHTML = "";
+
+        runSearch(searchString);
 
     }
 

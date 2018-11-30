@@ -84,7 +84,9 @@ h2 {
 }
 
 .movieCard > p:nth-child(5) {
-    /*
+    font-size:10px;
+/*
+    
     padding: 1rem 2rem 2rem 0rem;
       white-space: nowrap; 
     width: 36rem; 
@@ -94,13 +96,18 @@ h2 {
     overflow: hidden;
     text-overflow: ellipsis; 
 */
+
 /*
     overflow: hidden;
-    width: 35rem;
+    width: 30rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    
 */
+    white-space: nowrap;
+  overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .imageSection {
@@ -155,23 +162,12 @@ h1 {
     border-radius: 20px;
     height: 7rem;
     padding: 1.2rem;
-    display: grid;
-    /*    background-color: #333;*/
-    /*
-    grid-template-columns: 1fr 2fr 1f;
-    grid-template-areas:
-        "a b c d";
-*/
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
 }
 
 #preferenceButton {
-    /*    display: flex;*/
-    /*    grid-area: a;*/
-    /*    padding: 0 1.3rem;*/
-
     cursor: pointer;
 }
 
@@ -286,7 +282,7 @@ h1 {
     height: 3.4rem;
     /*    border: solid 2px none;*/
     cursor: pointer;
-    grid-area: b;
+
 
 }
 
@@ -303,7 +299,6 @@ h1 {
     background-color: #CABA71;
     border-radius: 12px;
     /*    display: flex;*/
-    grid-area: c;
 }
 
 #searchButtonDiv > p {
@@ -390,4 +385,7 @@ footer {
 
 
 }
+
+
+
 

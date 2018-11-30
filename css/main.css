@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css?family=Charmonman|EB+Garamond|Noto+Sans+TC');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /*    height: 100%;*/
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size:16px;
+    height: auto;
+    min-height: 70rem;
+
+}
+
+body {
+
+    /*    background-color: #2B2B2B;*/
+
+    background: #2B2B2B;
+    background: linear-gradient(to right bottom, #402C5B, #563C78, #674990, #7753A8);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    padding-bottom: 27rem;
+}
+
+h2 {
+    color: #D2CDDB;
+    text-align: center;
+}
+
+.page {
+    margin: 20px;
+    /*    background-color: #A7DDA7;*/
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movieCard {
+    width: 46rem;
+    height: auto;
+    margin: 2rem auto;
+    position: relative;
+    /*    border: solid 2px black;*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #7D7679;
+    color: white;
+    cursor: pointer;
+/*    padding: 1rem;*/
+
+}
+
+.movieCard:hover {
+    transform: scale(1.1);
+}
+
+.movieCard > p {
+
+    padding: 10px;
+}
+
+.movieCard > p:first-of-type {
+    font-size: 2rem;
+    color: #212121;
+
+}
+
+.movieCard > p:nth-child(4) {
+    margin-left: 13rem;
+    width: 2.7rem;
+    background-color: #CABA71;
+    border-radius: 50px;
+    
+    border-radius: 50px;
+    /*    color:red;*/
+}
+
+.movieCard > p:nth-child(5) {
+    /*
+    padding: 1rem 2rem 2rem 0rem;
+      white-space: nowrap; 
+    width: 36rem; 
+  display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+*/
+/*
+    overflow: hidden;
+    width: 35rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+*/
+}
+
+.imageSection {
+    float: left;
+    width: 12rem;
+    height: 17rem;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+
+/*select only the images that are direct descendants of .imageSection*/
+.imageSection > img {
+    height: 17rem;
+    margin-right: 1rem;
+}
+
+h1 {
+    text-align: center;
+    padding: 4rem;
+    color: white;
+    /*    filter: saturate(3);*/
+    font-size: 3.5rem;
+    text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1),
+        10px 20px 5px rgba(0, 0, 0, 0.05),
+        -10px 20px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.page {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.input-containers {
+    /*    border:solid 2px #398689; */
+    padding-top: 8rem 0;
+/*    background-color: #;*/
+    border-radius: 20px;
+    height: 7rem;
+    padding: 1.2rem;
+    display: grid;
+    /*    background-color: #333;*/
+    /*
+    grid-template-columns: 1fr 2fr 1f;
+    grid-template-areas:
+        "a b c d";
+*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#preferenceButton {
+    /*    display: flex;*/
+    /*    grid-area: a;*/
+    /*    padding: 0 1.3rem;*/
+
+    cursor: pointer;
+}
+
+#preferenceButton:hover {
+    width: 2.3rem;
+    height: 2.2rem;
+/*        border: solid 2px #CAAE62;*/
+    background-color: #D2CDDB;
+    border-radius: 50px;
+    
+}
+/*
+#preferenceButton:hover {
+		-webkit-animation: rotation 2s 1 linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+*/
+
+#preferenceButton > img {
+    color: white;
+    filter: grayscale(100%);
+}
+
+.homeh1 {
+    display: flex;
+    flex-wrap: wrap;
+    display: block;
+    justify-content: center;
+    color: white;
+    /*    filter: saturate(3);*/
+    font-size: 3.5rem;
+    text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1),
+        10px 20px 5px rgba(0, 0, 0, 0.05),
+        -10px 20px 5px rgba(0, 0, 0, 0.05);
+}
+
+.modal {
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    z-index: 200;
+    top: calc((100% - 300px)/2);
+    left: calc((100% - 500px)/2);
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: #555;
+    border: solid 2px #555;
+    border-radius: 10px;
+    background-color: #D2CDDB;
+}
+
+.modal h1 {
+    padding-top: 1.5rem;
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 3rem;
+}
+
+
+
+.motv {
+
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+.modalButtons {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+#cancelButton {
+    margin: 0 2rem;
+    padding: 0.2rem;
+    width: 5.4rem;
+    height: 2rem;
+    cursor: pointer;
+    color: #555;
+    font-size: 1rem;
+    border: solid 2px #CAAE62;
+    background-color: #CABA71;
+    border-radius: 10px;
+}
+
+#saveButton {
+    margin: 0 2rem;
+    padding: 0.2rem;
+    width: 5.4rem;
+    height: 2rem;
+    cursor: pointer;
+    color: #555;
+    font-size: 1rem;
+    border: solid 2px #CAAE62;
+    background-color: #CABA71;
+    border-radius: 10px;
+}
+
+#search-input {
+    border-radius: 10px;
+    margin: 0 1.3rem;
+    width: 30rem;
+    height: 3.4rem;
+    /*    border: solid 2px none;*/
+    cursor: pointer;
+    grid-area: b;
+
+}
+
+#search-input:hover {
+    transform: scale(1.1);
+}
+
+#searchButtonDiv {
+    display: flex;
+    width: 7rem;
+    height: 3rem;
+    cursor: pointer;
+    border: solid 2px #CAAE62;
+    background-color: #CABA71;
+    border-radius: 12px;
+    /*    display: flex;*/
+    grid-area: c;
+}
+
+#searchButtonDiv > p {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: #555;
+}
+
+#searchButtonDiv > svg {
+    padding-top: 0.rem;
+    filter: grayscale(100%);
+}
+
+#backButton {
+    display: flex;
+    /*    padding: 0.2rem;*/
+    margin: 0 1rem;
+    cursor: pointer;
+
+}
+
+#backButton:hover {
+    width: 2.3rem;
+    height: 2.3rem;
+    /*    border: solid 2px #CAAE62;*/
+    background-color: #D2CDDB;
+    border-radius: 50px;
+}
+/*
+.scdon {
+    transform: translateY(300);
+
+}
+.scdoff {
+    transform: translateY(-400%);
+
+}
+*/
+.off {
+    transform: translateY(-400%);
+}
+
+.on {
+    transform: translateY(0);
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+#logo {
+    width: 15rem;
+    filter: grayscale(100%);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 580px) {
+    html{
+        font-size:10px;
+    }
+
+/*
+    section.content.flex-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+   .movieCard {
+
+        margin-right: 2rem;
+        flex-basis: 50%;
+
+    }
+*/
+
+
+}
+

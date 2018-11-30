@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendations</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <main>
+
+        <div class="page active" id="home">
+            <header>
+                <h1 class="homeh1">Movie recommendations</h1>
+
+                <div class="input-containers">
+
+                    <div id="preferenceButton">
+                        <img id="preference-button" class="iconic iconic-md" alt="Preferences" title="Preferences" data-src="img/cog.svg" />
+                    </div>
+
+                    <input type="text" id="search-input" placeholder="search" />
+                    <div id="searchButtonDiv">
+                        <p> Search</p>
+                        <img id="search-button" alt="Search" title="Search" data-src="img/magnifying-glass-lg.svg" class="iconic iconic-md" />
+
+                    </div>
+
+
+
+                </div>
+            </header>
+            <footer>
+                <img id="logo" src="img/logomovie.svg" />
+            </footer>
+        </div>
+
+        <div class="page" id="search-results">
+            <h1 id="changeh1">Movies</h1>
+            
+            <div class="input-containers">
+               
+                <div id="backButton">
+                    <img id="back-button" alt="Back Button" title="Back" data-src="img/action-undo-lg.svg" data-file-extension="CCP4" class="iconic iconic-md" />
+                    
+                </div>
+                <div id="preferenceButton">
+                    <img id="preference-button" class="iconic iconic-md" alt="Preferences" title="Preferences" data-src="img/cog.svg" />
+                </div>
+
+                <input type="text" id="search-input" placeholder="search" />
+                <div id="searchButtonDiv">
+                    <p> Search</p>
+                    <img id="search-button" alt="Search" title="Search" data-src="img/magnifying-glass-lg.svg" class="iconic iconic-md" />
+
+                </div>
+
+
+
+            </div>
+
+            <section class="title"></section>
+            <section class="content flex-container"></section>
+
+        </div>
+
+        <div class="page" id="recommend-results">
+            <h1>Recommend</h1>
+            <div class="input-containers">
+
+                <div id="backButton">
+                    <img id="back-button" onclick="window.history.go(-1)" alt="Back Button" title="Back" data-src="img/action-undo-lg.svg" data-file-extension="CCP4" class="iconic iconic-md" />
+                </div>
+                <div id="preferenceButton">
+                    <img id="preference-button" class="iconic iconic-md" alt="Preferences" title="Preferences" data-src="img/cog.svg" />
+                </div>
+
+                <input type="text" id="search-input" placeholder="search" />
+                <div id="searchButtonDiv">
+                    <p> Search</p>
+                    <img id="search-button" alt="Search" title="Search" data-src="img/magnifying-glass-lg.svg" class="iconic iconic-md" />
+
+                </div>
+
+
+
+            </div>
+
+            <section class="title"></section>
+            <section class="content flex-container"></section>
+        </div>
+    </main>
+
+    <div class="overlay hide">&nbsp;</div>
+
+    <div class="modal off ">
+        <div>
+            <h1>Movie o TV</h1>
+        </div>
+        <div class="motv">
+            <div> <input type="radio" name="preferences" value="movie" id="movie">
+                <label for="Movie">Movie</label> </div>
+            <div>
+                <input type="radio" name="preferences" value="tv" id="tv">
+                <label for="Tv">Tv</label>
+            </div>
+        </div>
+        <div class="modalButtons">
+            <button id="cancelButton">Cancel</button>
+            <button id="saveButton">Save</button>
+        </div>
+
+
+    </div>
+
+    <script src="js/iconic.min.js"></script>
+    <script src="js/key.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
